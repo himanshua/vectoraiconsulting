@@ -7,7 +7,7 @@ export default function Contact() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Get in Touch</h2>
           <p className="text-gray-400">
-            Ready to transform your business with AI? Send us a message and we'll get back to you within 24 hours.
+            Ready to transform your business with AI? Send us a message and we&apos;ll get back to you within 24 hours.
           </p>
         </div>
 

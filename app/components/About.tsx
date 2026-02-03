@@ -10,7 +10,7 @@ export default function About() {
             Vectora AI Consulting was founded on the principle that artificial intelligence should be accessible, ethical, and results-driven. We bridge the gap between complex AI research and practical business application.
           </p>
           <p className="text-gray-400 text-lg leading-relaxed">
-            Our team of data scientists and strategic consultants work closely with industry leaders to build custom solutions that don't just follow trends—they set them.
+            Our team of data scientists and strategic consultants work closely with industry leaders to build custom solutions that don&apos;t just follow trends—they set them.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
