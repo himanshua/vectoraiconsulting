@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const [year, setYear] = useState<number>(new Date().getFullYear());
@@ -14,7 +15,16 @@ export default function Footer() {
     <footer className="bg-black border-t border-white/10 py-16 px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
-          <Link href="/" className="text-2xl font-bold tracking-tighter">VECTORA</Link>
+          <Link href="/" className="flex items-center gap-3 mb-4">
+            <Image
+              src="/vector_ai_consulting.jpg"
+              alt="Vectora AI Consulting Logo"
+              width={32}
+              height={32}
+              className="rounded-sm"
+            />
+            <span className="text-2xl font-bold tracking-tighter">VECTORA</span>
+          </Link>
           <p className="mt-4 text-gray-400 max-w-sm leading-relaxed">
             Building the future of AI consulting. We help businesses navigate the complex landscape of artificial intelligence with bespoke, scalable solutions.
           </p>
