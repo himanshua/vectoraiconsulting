@@ -7,12 +7,12 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/50 border-b border-white/10" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-6">
         <div className="flex items-center">
-          <Link href="/" aria-label="Vectora Home" className="flex items-center gap-3">
+          <Link href="/" aria-label="Vector Home" className="flex items-center gap-3">
             <Image
               src="/vector_ai_consulting.jpg"
-              alt="Vectora AI Consulting Logo"
-              width={32}
-              height={32}
+              alt="Vector AI Consulting Logo"
+              width={48}
+              height={48}
               className="rounded-sm"
               priority
             />
