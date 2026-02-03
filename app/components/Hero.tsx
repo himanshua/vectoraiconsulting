@@ -25,7 +25,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link 
-            href="/contact" 
+            href="#contact" 
             className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors w-full sm:w-auto"
           >
             Get Started

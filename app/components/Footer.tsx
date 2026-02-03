@@ -23,8 +23,8 @@ export default function Footer() {
           <h4 className="font-semibold mb-6 text-white">Platform</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
             <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
-            <li><Link href="/expertise" className="hover:text-white transition-colors">Expertise</Link></li>
-            <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+            <li><Link href="#services" className="hover:text-white transition-colors">Expertise</Link></li>
+            <li><Link href="#about" className="hover:text-white transition-colors">About Us</Link></li>
           </ul>
         </div>
         <div>
@@ -32,7 +32,7 @@ export default function Footer() {
           <ul className="space-y-4 text-gray-400 text-sm">
             <li><a href="https://linkedin.com" className="hover:text-white transition-colors">LinkedIn</a></li>
             <li><a href="https://twitter.com" className="hover:text-white transition-colors">Twitter</a></li>
-            <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+            <li><Link href="#contact" className="hover:text-white transition-colors">Contact Us</Link></li>
           </ul>
         </div>
       </div>
