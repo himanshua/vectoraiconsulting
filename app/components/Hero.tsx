@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-32 pb-20 overflow-hidden bg-black text-white">
       {/* Background Glow Effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl opacity-30 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-purple-600 rounded-full blur-[120px]"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600 rounded-full blur-[120px] will-change-transform"></div>
+        <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-purple-600 rounded-full blur-[120px] will-change-transform"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl text-center">
