@@ -31,7 +31,7 @@ export default function Hero() {
             Get Started
           </Link>
           <Link 
-            href="/services" 
+            href="#services" 
             className="px-8 py-4 bg-transparent border border-gray-700 text-white font-semibold rounded-full hover:bg-gray-900 transition-colors w-full sm:w-auto"
           >
             Our Services
