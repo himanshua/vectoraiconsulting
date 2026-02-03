@@ -18,12 +18,12 @@ export default function Footer() {
           <Link href="/" className="flex items-center gap-3 mb-4">
             <Image
               src="/vector_ai_consulting.jpg"
-              alt="Vectora AI Consulting Logo"
+              alt="Vector AI Consulting Logo"
               width={64}
               height={64}
               className="rounded-sm"
             />
-            <span className="text-2xl font-bold tracking-tighter">VECTORA</span>
+            <span className="text-2xl font-bold tracking-tighter">VECTOR</span>
           </Link>
           <p className="mt-4 text-gray-400 max-w-sm leading-relaxed">
             Building the future of AI consulting. We help businesses navigate the complex landscape of artificial intelligence with bespoke, scalable solutions.
