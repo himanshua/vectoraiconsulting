@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs">
-        <p>© {year} Vectora AI Consulting. All rights reserved.</p>
+        <p>© {year} Vector AI Consulting. All rights reserved.</p>
         <div className="flex gap-6">
           <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-white">Terms of Service</Link>

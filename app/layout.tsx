@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vectora AI Consulting | Building the Future of AI",
+  title: "Vector AI Consulting | Building the Future of AI",
   description: "Bespoke AI solutions to drive innovation and growth.",
 };
 

@@ -10,7 +10,7 @@ export default function Navbar() {
           <Link href="/" aria-label="Vectora Home" className="flex items-center gap-3">
             <Image
               src="/vector_ai_consulting.jpg"
-              alt="Vectora AI Consulting Logo"
+              alt="Vector AI Consulting Logo"
               width={64}
               height={64}
               className="rounded-sm"
