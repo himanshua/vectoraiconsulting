@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css'; // Your global styles
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vector AI Consulting | Building the Future of AI",
+  title: "Vectora AI Consulting | Building the Future of AI",
   description: "Bespoke AI solutions to drive innovation and growth.",
 };
 
@@ -28,6 +30,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+                <Analytics />
+
         <Navbar />
         {children}
       </body>

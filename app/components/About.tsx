@@ -7,7 +7,7 @@ export default function About() {
         <div>
           <h2 className="text-3xl md:text-5xl font-bold mb-8">Pioneering the AI Revolution</h2>
           <p className="text-gray-400 text-lg leading-relaxed mb-6">
-            Vector AI Consulting was founded on the principle that artificial intelligence should be accessible, ethical, and results-driven. We bridge the gap between complex AI research and practical business application.
+            Vectora AI Consulting was founded on the principle that artificial intelligence should be accessible, ethical, and results-driven. We bridge the gap between complex AI research and practical business application.
           </p>
           <p className="text-gray-400 text-lg leading-relaxed">
             Our team of data scientists and strategic consultants work closely with industry leaders to build custom solutions that don&apos;t just follow trends—they set them.
