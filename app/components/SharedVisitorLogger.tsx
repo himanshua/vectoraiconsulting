@@ -45,11 +45,18 @@ async function sendSharedVisitor() {
     createdAt: new Date().toISOString(),
   };
 
-  await fetch(SHARED_ENDPOINT, {
+  const response = await fetch(SHARED_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Server responded with ${response.status}: ${errorText}`);
+  }
+
+  console.log("Shared visitor logged successfully");
 }
 
 export default function SharedVisitorLogger() {
