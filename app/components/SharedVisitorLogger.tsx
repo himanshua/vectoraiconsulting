@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-const SHARED_ENDPOINT = "https://aheadterra.com/api/visitors";
+const SHARED_ENDPOINT = "/api/shared-visitors";
 
 const getNavigatorInfo = () => {
   const nav = navigator as Navigator & {
@@ -47,13 +47,16 @@ async function sendSharedVisitor() {
 
   const response = await fetch(SHARED_ENDPOINT, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(payload),
+    keepalive: true, // Ensures the request finishes even if the page is closed
+    mode: 'cors',
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Server responded with ${response.status}: ${errorText}`);
+    throw new Error(`Server responded with ${response.status}`);
   }
 
   console.log("Shared visitor logged successfully");

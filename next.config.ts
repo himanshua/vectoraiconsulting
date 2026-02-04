@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/shared-visitors',
+        destination: 'https://aheadterra.com/api/visitors',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
