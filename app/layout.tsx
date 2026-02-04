@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css'; // Your global styles
+import SharedVisitorLogger from "./components/SharedVisitorLogger";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
                 <Analytics />
+                <SharedVisitorLogger />
 
         <Navbar />
         {children}
