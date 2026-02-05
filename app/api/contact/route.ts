@@ -30,8 +30,9 @@ export async function POST(request: Request) {
     }
 
     const mailOptions = {
-      from: process.env.FEEDBACK_SMTP_FROM || process.env.FEEDBACK_SMTP_USER,
+      from: `"${name}" <${process.env.FEEDBACK_SMTP_USER}>`,
       to: 'himanshu.inperson@gmail.com',
+      replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
