@@ -29,7 +29,7 @@ export default function Contact() {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else setStatus('error');
-    } catch (error) { setStatus('error'); }
+    } catch { setStatus('error'); }
   };
 
   return (
@@ -90,7 +90,7 @@ export default function Contact() {
           </button>
 
           {status === 'success' && (
-            <p className="text-green-600 text-center font-medium">Message sent successfully! We'll be in touch soon.</p>
+            <p className="text-green-600 text-center font-medium">Message sent successfully! We&apos;ll be in touch soon.</p>
           )}
           {status === 'error' && (
             <p className="text-red-600 text-center font-medium">Something went wrong. Please try again later.</p>
