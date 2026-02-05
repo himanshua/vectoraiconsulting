@@ -25,11 +25,11 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 bg-zinc-950 px-6 border-t border-white/5">
+    <section id="process" className="py-24 bg-gray-50 px-6 border-t border-black/5">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Process</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             A streamlined approach to transforming your business with artificial intelligence.
           </p>
         </div>
@@ -37,11 +37,11 @@ export default function Process() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="text-5xl font-black text-white/5 absolute -top-8 -left-2 select-none">
+              <div className="text-5xl font-black text-yellow-400/20 absolute -top-8 -left-2 select-none">
                 {step.number}
               </div>
               <h3 className="text-xl font-bold mb-4 relative z-10">{step.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>
