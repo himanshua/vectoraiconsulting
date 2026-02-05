@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `"${name}" <${process.env.FEEDBACK_SMTP_USER}>`,
-      to: 'himanshu.inperson@gmail.com',
+      to: 'himanshu@aheadterra.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       text: `
@@ -48,7 +48,22 @@ export async function POST(request: Request) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    const confirmationMailOptions = {
+      from: process.env.FEEDBACK_SMTP_FROM || `"Vectora AI Consulting" <${process.env.FEEDBACK_SMTP_USER}>`,
+      to: email,
+      subject: 'Thank you for contacting Vectora AI Consulting',
+      text: `Hi ${name},\n\nThank you for reaching out. We have received your message and will get back to you shortly.\n\nBest regards,\nVectora AI Consulting Team`,
+      html: `
+        <h3>Thank you for contacting us!</h3>
+        <p>Hi ${name},</p>
+        <p>We have received your message and will get back to you shortly.</p>
+        <br>
+        <p>Best regards,</p>
+        <p><strong>Vectora AI Consulting Team</strong></p>
+      `,
+    };
+
+    await Promise.all([transporter.sendMail(mailOptions), transporter.sendMail(confirmationMailOptions)]);
 
     return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
   } catch (error) {
