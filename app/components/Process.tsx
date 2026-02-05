@@ -37,7 +37,7 @@ export default function Process() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="text-5xl font-black text-yellow-400/20 absolute -top-8 -left-2 select-none">
+              <div className="text-5xl font-black text-gray-200 absolute -top-8 -left-2 select-none">
                 {step.number}
               </div>
               <h3 className="text-xl font-bold mb-4 relative z-10">{step.title}</h3>

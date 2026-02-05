@@ -1,6 +1,37 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('submitting');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else setStatus('error');
+    } catch (error) { setStatus('error'); }
+  };
+
   return (
     <section id="contact" className="py-24 bg-white px-6 border-t border-black/5">
       <div className="max-w-4xl mx-auto">
@@ -11,7 +42,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm font-medium text-gray-600">Name</label>
@@ -20,6 +51,8 @@ export default function Contact() {
                 id="name"
                 className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-red-600 transition-colors text-black"
                 placeholder="John Doe"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -30,6 +63,8 @@ export default function Contact() {
                 id="email"
                 className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-red-600 transition-colors text-black"
                 placeholder="john@example.com"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -41,15 +76,25 @@ export default function Contact() {
               rows={5}
               className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-red-600 transition-colors text-black resize-none"
               placeholder="Tell us about your project..."
+              value={formData.message}
+              onChange={handleChange}
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-colors cursor-pointer"
+            disabled={status === 'submitting'}
+            className="w-full py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {status === 'submitting' ? 'Sending...' : 'Send Message'}
           </button>
+
+          {status === 'success' && (
+            <p className="text-green-600 text-center font-medium">Message sent successfully! We'll be in touch soon.</p>
+          )}
+          {status === 'error' && (
+            <p className="text-red-600 text-center font-medium">Something went wrong. Please try again later.</p>
+          )}
         </form>
       </div>
     </section>
