@@ -25,11 +25,19 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
-      } else setStatus('error');
-    } catch { setStatus('error'); }
+      } else {
+        console.error("Form submission error:", result);
+        setStatus('error');
+      }
+    } catch (error) { 
+      console.error("Network error:", error);
+      setStatus('error'); 
+    }
   };
 
   return (
