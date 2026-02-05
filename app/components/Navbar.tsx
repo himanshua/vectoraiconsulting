@@ -16,7 +16,7 @@ export default function Navbar() {
               className="rounded-sm"
               priority
             />
-            <span className="text-xl font-bold tracking-tighter">VECTORA</span>
+            <span className="text-xl font-bold tracking-tighter">VECTOR</span>
           </Link>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">

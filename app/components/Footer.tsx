@@ -23,7 +23,7 @@ export default function Footer() {
               height={80}
               className="rounded-sm"
             />
-            <span className="text-2xl font-bold tracking-tighter">VECTORA</span>
+            <span className="text-2xl font-bold tracking-tighter">VECTOR</span>
           </Link>
           <p className="mt-4 text-gray-600 max-w-sm leading-relaxed">
             Building the future of AI consulting. We help businesses navigate the complex landscape of artificial intelligence with bespoke, scalable solutions.
