@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
           src="/images/banner.JPG"
-          alt="Vectora AI Banner"
+          alt="Vector AI Banner"
           fill
           className="object-cover"
           priority

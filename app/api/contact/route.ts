@@ -49,17 +49,17 @@ export async function POST(request: Request) {
     };
 
     const confirmationMailOptions = {
-      from: process.env.FEEDBACK_SMTP_FROM || `"Vectora AI Consulting" <${process.env.FEEDBACK_SMTP_USER}>`,
+      from: process.env.FEEDBACK_SMTP_FROM || `"Vector AI Consulting" <${process.env.FEEDBACK_SMTP_USER}>`,
       to: email,
-      subject: 'Thank you for contacting Vectora AI Consulting',
-      text: `Hi ${name},\n\nThank you for reaching out. We have received your message and will get back to you shortly.\n\nBest regards,\nVectora AI Consulting Team`,
+      subject: 'Thank you for contacting Vector AI Consulting',
+      text: `Hi ${name},\n\nThank you for reaching out. We have received your message and will get back to you shortly.\n\nBest regards,\nVector AI Consulting Team`,
       html: `
         <h3>Thank you for contacting us!</h3>
         <p>Hi ${name},</p>
         <p>We have received your message and will get back to you shortly.</p>
         <br>
         <p>Best regards,</p>
-        <p><strong>Vectora AI Consulting Team</strong></p>
+        <p><strong>Vector AI Consulting Team</strong></p>
       `,
     };
 
