@@ -28,7 +28,7 @@ export default function Process() {
     <section id="process" className="py-24 bg-gray-50 px-6 border-t border-black/5">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Process</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-red-600">Our Process</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             A streamlined approach to transforming your business with artificial intelligence.
           </p>
@@ -37,7 +37,7 @@ export default function Process() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="text-5xl font-black text-gray-200 absolute -top-8 -left-2 select-none">
+              <div className="text-5xl font-black text-red-200 absolute -top-8 -left-2 select-none">
                 {step.number}
               </div>
               <h3 className="text-xl font-bold mb-4 relative z-10">{step.title}</h3>
